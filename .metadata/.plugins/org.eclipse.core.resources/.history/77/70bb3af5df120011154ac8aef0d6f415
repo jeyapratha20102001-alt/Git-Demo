@@ -1,0 +1,22 @@
+package selenium;
+
+public class CreditCard extends Payment{
+	
+	/*
+	 * void open() { System.out.println("FireFox Browser Open"); }
+	 */
+	
+	void pay() {
+		System.out.println(" Credit Card Payment Succesfully");
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		/*JavaPractice obj=new ChromeBrowser();
+	    obj=new FireFoxBrowser();
+		obj.open();
+	}*/
+		
+	}
+}

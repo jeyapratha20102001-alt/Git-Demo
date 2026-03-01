@@ -1,0 +1,23 @@
+package selenium;
+
+public class Employee {
+	private String name;
+	private double Salary;
+	
+	public void getName() {
+	  String c=name;
+	  System.out.println(c);
+	}
+	
+	public void changeSalary() {
+		Salary=Salary+1000;
+	}
+		
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package selenium;
+
+public class Java2 {
+	
+	public String sound() {
+		System.out.println("Darks");
+		return null;
+	}
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

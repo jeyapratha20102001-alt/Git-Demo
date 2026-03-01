@@ -1,0 +1,16 @@
+package selenium;
+
+public class CreditCard extends JavaPractice{
+	
+	/*
+	 * void open() { System.out.println("FireFox Browser Open"); }
+	 */
+	public static void main(String[] args) {
+		
+		/*JavaPractice obj=new ChromeBrowser();
+	    obj=new FireFoxBrowser();
+		obj.open();
+	}*/
+		
+	}
+}

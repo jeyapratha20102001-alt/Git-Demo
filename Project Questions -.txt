@@ -1,0 +1,23 @@
+      Project Questions :- 
+1:- Why did you choose Page Object Model (POM) in your framework? What problem does it solve?
+
+    * We used Page Object Model in our framework to improve code reusability and maintainability.
+In POM, locators and web element methods are separated from test scripts by maintaining them inside page classes.
+This helps reduce code duplication and makes maintenance easier when UI changes occur.
+
+2:-Why did you use Explicit Wait instead of Thread. sleep()?
+      *We used Explicit Wait because it waits only until a specific condition is satisfied, such as element visibility or click ability.
+Unlike Thread. sleep(), which waits for a fixed time, Explicit Wait is dynamic and improves execution speed and script stability.
+It also helps avoid unnecessary delays and reduces test failures caused by synchronization issues.
+
+3:-How do you handle test failures in your automation framework?
+     * One of the main challenges I faced in the automation project was handling dynamic web elements and synchronization issues, where elements were not loading properly during execution.
+
+To overcome this, I used dynamic XPath strategies and implemented Explicit Waits to ensure elements were visible or clickable before performing actions.
+
+Another challenge was maintaining scripts when UI changes occurred. By using the Page Object Model design pattern, we updated locators only in the page class instead of modifying multiple test scripts, which reduced maintenance effort.
+
+These solutions improved script stability and reduced test failures during regression execution.
+
+4:- Why should we hire you?”
+        * I have strong automation fundamentals, practical scripting experience, and a learning mindset. I am confident that I can contribute effectively to the team while continuously improving my skills.

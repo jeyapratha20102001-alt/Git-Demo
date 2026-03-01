@@ -1,0 +1,126 @@
+package selenium;
+
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Java {
+
+	public static void main(String[] args) {
+		/*
+		 * int n=7; int ft=0; int se=1; int next=0;
+		 * 
+		 * if(n==1) System.out.println(ft); if(n==2) System.out.println(se); else {
+		 * 
+		 * 
+		 * for (int i = 3; i <=n; i++) { next=ft+se;
+		 * 
+		 * ft=se; se=next; } System.out.print(next+" "); }
+		 */
+
+		// 1 Reverse a String
+		/*
+		 * String str="Java"; for (int i = str.length()-1; i >=0 ; i--) {
+		 * System.out.print(str.charAt(i)); }
+		 */
+
+		/*
+		 * String str = "Java Selenium Test"; String rev = ""; String result = "";
+		 * String[] split = str.split(" "); for (String string : split) { for (int i =
+		 * string.length() - 1; i >= 0; i--) { rev = rev + string.charAt(i); } rev = rev
+		 * + " "; } result = result + " " + rev; System.out.println(result);
+		 */
+		/*
+		 * String str="I love Automation"; String word="";String result=""; for (int i =
+		 * 0; i < str.length(); i++) { if (str.charAt(i)!=' ') {
+		 * word=str.charAt(i)+word; } else { result=result+" "+word; word=""; }
+		 * 
+		 * } result=result+" "+word; System.out.println(result);
+		 */
+		// paindrome
+		/*
+		 * String str="madam"; String rev=""; for (int i = str.length()-1; i >=0; i--) {
+		 * rev=rev+str.charAt(i); } if (str.equals(rev)) {
+		 * System.out.println("palindrome"); } else {
+		 * System.out.println("Not palindrome");
+		 * 
+		 * }
+		 */
+
+		/*
+		 * String str="I love Automation".toLowerCase(); Map<Character,Integer> map=new
+		 * LinkedHashMap<>();
+		 * 
+		 * for (char c : str.toCharArray()) { if(c==' ') continue; map.put(c,
+		 * map.getOrDefault(c, 0)+1); } System.out.println(map);
+		 */
+		/*
+		 * String str="programming"; Set<Character> set=new LinkedHashSet<>(); for
+		 * (Character character : str.toCharArray()) { set.add(character);
+		 * 
+		 * } System.out.println(set);
+		 */
+
+		// Missing Number
+		/*
+		 * int[] arr= {1,2,3,5}; int n=5; int actsum=0;int missingno=0; int
+		 * expectedsum=n*(n+1)/2; for (int i = 0; i < arr.length; i++) {
+		 * actsum=actsum+arr[i]; missingno=expectedsum-actsum;
+		 * 
+		 * }
+		 * 
+		 * System.out.println("Missing No:"+missingno);
+		 */
+		/*
+		 * int[] arr= {1,2,3,2,4,5,1};
+		 * 
+		 * Set<Integer> set=new LinkedHashSet<>(); Set<Integer> dupset=new
+		 * LinkedHashSet<>(); for (Integer integer : arr) { if (!set.add(integer)) {
+		 * dupset.add(integer); } }
+		 * 
+		 * System.out.println(dupset);
+		 */
+
+		// find Largest Number in array
+
+		/*
+		 * int[] arr= {10,25,5,40,15}; int max=Integer.MIN_VALUE;
+		 * 
+		 * for (int i = 0; i < arr.length; i++) { if (max<arr[i]) { max=arr[i]; }
+		 * 
+		 * 
+		 * } System.out.println(max);
+		 */
+		/*
+		 * int a=5 ;int b=10; a=a+b; b=a-b; a=a-b; System.out.println("a "+a);
+		 * System.out.println("b "+b);
+		 */
+		/*
+		 * String str="selenium";int vowcnt=0;int concnt=0; for (int i = 0; i <
+		 * str.length(); i++) { char c=str.charAt(i); if
+		 * (c=='a'||c=='e'||c=='i'||c=='o'||c=='u') { vowcnt++; } else { concnt++; } }
+		 * System.out.println(vowcnt); System.out.println(concnt);
+		 */
+		String str="listen";
+		String str2="silent";
+		
+		Map<Character,Integer> map=new LinkedHashMap<>();
+		for (char c : str.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0)+1);
+		}
+		
+		Map<Character,Integer> map1=new LinkedHashMap<>();
+		for (char c1 : str2.toCharArray()) {
+			map.put(c1, map.getOrDefault(c1, 0)+1);
+		}
+		if (map.equals(map1)) {
+			System.out.println("Anagram");
+		} else {
+			System.out.println("not Anagram");
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package selenium;
+
+public class ChromeBrowser extends JavaPractice {
+	
+	void open() {
+		System.out.println("ChromeBrowser Open");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

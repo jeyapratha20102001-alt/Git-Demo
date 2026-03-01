@@ -1,0 +1,14 @@
+package selenium;
+
+public class ChromeBrowser {
+	
+	void open() {
+		System.out.println("opening  browser");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

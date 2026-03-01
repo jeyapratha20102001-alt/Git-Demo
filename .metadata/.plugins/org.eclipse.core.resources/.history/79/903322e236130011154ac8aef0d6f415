@@ -1,0 +1,19 @@
+package framework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class RegistrationTest extends BaseClass {
+
+	
+	@Test(groups= {"smoke"})
+	public void register() {
+		driver.findElement(By.id("userName")).sendKeys("admin");
+		driver.findElement(By.id("password")).sendKeys("User@12345", Keys.TAB);
+		driver.findElement(By.id("newUser")).click();
+
+	}
+
+}

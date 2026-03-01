@@ -1,0 +1,19 @@
+package framework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseClass {
+ 
+	
+	public void browserLaunch() {
+		 WebDriver driver=new ChromeDriver();
+		 driver =new ChromeDriver();
+		 driver.get("https://demoqa.com/login");
+		 
+	}
+	
+
+}

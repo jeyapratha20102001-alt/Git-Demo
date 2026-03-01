@@ -1,0 +1,14 @@
+package selenium;
+
+public class FireFoxBrowser {
+	
+	void open() {
+		System.out.println("FireFox Browser Open");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

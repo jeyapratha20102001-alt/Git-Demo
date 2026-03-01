@@ -1,0 +1,46 @@
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Employee {
+	private String name;
+	private double Salary;
+	
+	
+	
+	
+	public void getName() {
+	  String c="Jeya";
+	  System.out.println(c);
+	}
+	
+	public void changeSalary() {
+		Salary=Salary+1000;
+	}
+	
+	private By Name=By.id("username");
+	private By pass=By.id("pass");
+	private By login=By.id("logIn");
+	
+	public String enterName() {
+		driver.find
+	}
+	
+		
+	
+
+	public static void main(String[] args) {
+		
+		WebDriver driver=new ChromeDriver();
+		driver.findElement(By.id("username")).sendKeys(" user");
+		driver.findElement(By.id("pass")).sendKeys("user@123");
+		driver.findElement(By.id("logIn")).click();
+		
+		
+		
+
+	}
+
+}

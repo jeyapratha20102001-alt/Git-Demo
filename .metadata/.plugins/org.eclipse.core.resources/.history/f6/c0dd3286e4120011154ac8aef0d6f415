@@ -1,0 +1,18 @@
+package selenium;
+
+public class FireFoxBrowser extends Payment {
+	
+	/*
+	 * void open() { System.out.println("ChromeBrowser Open"); }
+	 */
+	
+	void pay() {
+		System.out.println("UPI Payment Successfully");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

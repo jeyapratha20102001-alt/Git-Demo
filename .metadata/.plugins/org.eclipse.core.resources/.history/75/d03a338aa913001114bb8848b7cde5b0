@@ -1,0 +1,60 @@
+package selenium;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Java {
+
+	public static void main(String[] args) {
+		/*
+		 * int n=7; int ft=0; int se=1; int next=0;
+		 * 
+		 * if(n==1) System.out.println(ft); if(n==2) System.out.println(se); else {
+		 * 
+		 * 
+		 * for (int i = 3; i <=n; i++) { next=ft+se;
+		 * 
+		 * ft=se; se=next; } System.out.print(next+" "); }
+		 */
+		
+		// 1 Reverse a String 
+		/*
+		 * String str="Java"; for (int i = str.length()-1; i >=0 ; i--) {
+		 * System.out.print(str.charAt(i)); }
+		 */
+		
+		/*
+		 * String str="I love automation";String rev="";String result=""; String[] split
+		 * = str.split(" "); for (String string : split) { for (int i = string
+		 * .length()-1; i >=0 ; i--) { rev=rev+string.charAt(i); } rev=rev+" "; }
+		 * result=result+" "+rev; System.out.println(result);
+		 */
+		
+		/*
+		 * String str="I love Automation"; String word="";String result=""; for (int i =
+		 * 0; i < str.length(); i++) { if (str.charAt(i)!=' ') {
+		 * word=str.charAt(i)+word; } else { result=result+" "+word; word=""; }
+		 * 
+		 * } result=result+" "+word; System.out.println(result);
+		 */
+		// paindrome 
+		/*
+		 * String str="madam"; String rev=""; for (int i = str.length()-1; i >=0; i--) {
+		 * rev=rev+str.charAt(i); } if (str.equals(rev)) {
+		 * System.out.println("palindrome"); } else {
+		 * System.out.println("Not palindrome");
+		 * 
+		 * }
+		 */
+		
+		String str="Automation".toLowerCase();
+		Map<Character,Integer> map=new LinkedHashMap<>();
+		
+		for (char c : str.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0)+1);
+		}
+		System.out.println(map);
+		
+	}
+
+}

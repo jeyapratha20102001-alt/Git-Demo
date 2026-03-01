@@ -1,0 +1,24 @@
+package selenium;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RegisterTest {
+
+	public static void main(String[] args) {
+	  WebDriver driver=new ChromeDriver();
+	  driver.get("https://demoqa.com/register");
+	  driver.findElement(By.id("firstname")).sendKeys("Jeya");
+	  driver.findElement(By.id("lastname")).sendKeys("Pratha");
+	  driver.findElement(By.id("userName")).sendKeys("Jeya");
+	  driver.findElement(By.id("password")).sendKeys("Jeya@12345");
+	  driver.findElement(By.id("register")).click();
+	  Alert alert = driver.switchTo().alert();
+	  System.out.println(alert.getText());
+	  
+
+	}
+
+}

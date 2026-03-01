@@ -1,0 +1,337 @@
+package selenium;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Locators {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+
+		/*
+		 * driver.get("https://www.saucedemo.com/ ");
+		 * 
+		 * driver.manage().window().maximize(); //driver.quit();
+		 * 
+		 * // UseName driver.findElement(By.xpath("//input[@type='text']")).sendKeys(
+		 * "standard_user");
+		 * 
+		 * // Pass Word (Collection Based X path) //
+		 * driver.findElement(By.xpath("(//input[@class='input_error form_input']) [2] "
+		 * )).sendKeys("secret_sauce");
+		 * 
+		 * // pass Word ( attribute based xpath)
+		 * //driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(
+		 * "secret_sauce");
+		 * 
+		 * // Pass Word ( partial attribute Based X path)
+		 * driver.findElement(By.xpath("(//input[contains(@class,'form_input')]) [2]")).
+		 * sendKeys("secret_sauce");
+		 * 
+		 * 
+		 * // Login
+		 * driver.findElement(By.xpath("//input[@data-test='login-button']")).click();
+		 */
+
+		// Relative X path
+
+		// driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		// driver.findElement(By.xpath("////div[@class='oxd-form-actions
+		// orangehrm-login-action']/button")).click();
+
+		// Parent to Child
+		// WebElement element =
+		// driver.findElement(By.xpath("(//div[@class='oxd-input-group__label-wrapper']/label)[1]"));
+		// System.out.println(element.getText());
+
+		// Elder Cousin to Younger Cousin
+		// driver.findElement(By.xpath("//label[@class='oxd-label']/following::input")).sendKeys("Admin");
+
+		// Younger Cousin to Elder Cousin
+		// WebElement element2 =
+		// driver.findElement(By.xpath("//input[@placeholder='Username']/preceding::label"));
+		// System.out.println(element2.getText());
+
+		// Text based X path
+		// driver.findElement(By.xpath("//button[text()='Login']")).click();
+
+		// Grant Child to Grant Parent
+		/*
+		 * driver.get("https://www.saucedemo.com/");
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		 * driver.findElement(By.xpath("//input[@id='user-name']//ancestor::form"));
+		 */
+
+		/*
+		 * driver.get(
+		 * "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		 * driver.findElement(By.name("username")).sendKeys("Admin");
+		 * driver.findElement(By.name("password")).sendKeys("admin123"); //log in button
+		 * By X path //driver.findElement(By.xpath("//button[@type='submit']")).click();
+		 * //login button By cssselector
+		 * driver.findElement(By.cssSelector("button[type='submit']")).click();
+		 * 
+		 * System.out.println(driver.getTitle());
+		 * 
+		 * // Dash Board menu Click
+		 * driver.findElement(By.xpath("//span[text()='Dashboard']")).click();
+		 */
+
+		// Drop Down Using Select Class
+
+		/*
+		 * driver.get("https://the-internet.herokuapp.com/dropdown");
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		 * 
+		 * WebElement element= driver.findElement(By.id("dropdown"));
+		 * 
+		 * Select dropDown=new Select(element); //dropDown.selectByIndex(2);
+		 * 
+		 * //dropDown.selectByValue("2");
+		 * 
+		 * dropDown.selectByVisibleText("Option 2");
+		 * 
+		 * System.out.println(dropDown.getFirstSelectedOption().getText());
+		 * 
+		 * List<WebElement> options = dropDown.getOptions();
+		 * 
+		 * for(WebElement s:options) { System.out.println(s.getText()); }
+		 */
+
+		// Handling Drop Down without Select Class
+		/*
+		 * driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		 * driver.findElement(By.id("divpaxinfo")).click();
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); int i=1;
+		 * while(i<=5) { driver.findElement(By.id("hrefIncAdt")).click(); i++; } {
+		 * driver.findElement(By.id("btnclosepaxoption")).click(); }
+		 */
+		// AutoSuggestive Drop Down
+
+		/*
+		 * driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		 * 
+		 * //driver.findElement(By.xpath("//input[@class='select_CTXT']")).click();
+		 * driver.findElement(By.xpath("//input[@class='select_CTXT']")).sendKeys("che")
+		 * ;
+		 * 
+		 * List<WebElement> options = driver.findElements(By.xpath("//a[@value]")); //
+		 * Explicit wait for Chennai option WebDriverWait wait = new
+		 * WebDriverWait(driver, Duration.ofSeconds(5));
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//a[@value='MAA']")));
+		 * 
+		 * 
+		 * for(WebElement option:options) {
+		 * if(option.getText().equalsIgnoreCase("Chennai (MAA)")) { option.click();
+		 * System.out.println(option.getText()); break; } }
+		 */
+		/*
+		 * driver.findElement(By.xpath("//input[@value='Arrival City']")).click();
+		 * driver.findElement(By.xpath("//input[@value='Arrival City']")).sendKeys("Mum"
+		 * );
+		 * 
+		 * //List<WebElement> elements = driver.findElements(By.xpath("//a[@valaue]"));
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//a[contains(text(),'Mumbai')]")));
+		 * driver.findElement(By.xpath("//a[contains(text(),'Mumbai')]")).click();
+		 */
+		/*
+		 * for(WebElement e:elements) { if(e.getText().equalsIgnoreCase("Mumbai (BOM)"))
+		 * { e.click(); System.out.println(e.getText()); break; } }
+		 */
+		/*
+		 * WebElement to =
+		 * driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
+		 * to.click(); to.sendKeys("del");
+		 * 
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//a[@value='DEL']")));
+		 * driver.findElement(By.xpath("//a[@value='DEL']")).click();
+		 */
+
+		// Alert Practice
+
+		/*
+		 * driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		 * driver.findElement(By.id("name")).sendKeys("Jeya");
+		 * 
+		 * // Simple alert
+		 * 
+		 * driver.findElement(By.id("alertbtn")).click(); Alert alert =
+		 * driver.switchTo().alert(); System.out.println(alert.getText());
+		 * alert.accept();
+		 * 
+		 * 
+		 * // Confirmation alert driver.findElement(By.id("confirmbtn")).click(); Alert
+		 * alert2 = driver.switchTo().alert();
+		 * 
+		 * //alert2.dismiss(); System.out.println(alert2.getText());
+		 * 
+		 * driver.findElement(By.id("dropdown-class-example")).click();
+		 */
+
+		// Frame Practice
+
+		/*
+		 * driver.get("https://the-internet.herokuapp.com/nested_frames");
+		 * driver.switchTo().frame("frame-top");
+		 * driver.switchTo().frame("frame-middle"); WebElement element =
+		 * driver.findElement(By.id("content")); System.out.println(element.getText());
+		 */
+
+		// Window Practice
+
+		/*
+		 * driver.get(
+		 * "https://www.qaplayground.com/practice/window?utm_source=chatgpt.com");
+		 * String parentWindow = driver.getWindowHandle();
+		 * 
+		 * driver.findElement(By.xpath("//button[text()='Open Home Page']")).click();
+		 * 
+		 * Set<String> windowHandles = driver.getWindowHandles(); for (String window :
+		 * windowHandles) { driver.switchTo().window(window); if
+		 * (driver.getCurrentUrl().equals("https://www.qaplayground.com/")) {
+		 * System.out.println(driver.getTitle());
+		 * 
+		 * } }
+		 * 
+		 * driver.switchTo().window(parentWindow);
+		 */
+		// My Task
+
+		/*
+		 * driver.get("https://the-internet.herokuapp.com/windows"); String parentWindow
+		 * = driver.getWindowHandle(); String title = driver.getTitle();
+		 * 
+		 * driver.findElement(By.xpath("//a[text()='Click Here']")).click();
+		 * 
+		 * Set<String> windowHandles = driver.getWindowHandles();
+		 * 
+		 * for (String handle : windowHandles) { driver.switchTo().window(handle);
+		 * 
+		 * if (driver.getCurrentUrl().equals(
+		 * "https://the-internet.herokuapp.com/windows/new")) {
+		 * System.out.println("Child Window URL :"+driver.getCurrentUrl());
+		 * System.out.println("Child Window Title :"+driver.getTitle()); break; } }
+		 * 
+		 * driver.switchTo().window(parentWindow); if (driver.getTitle().equals(title))
+		 * { System.out.println("Parent Title: "+driver.getTitle()); }
+		 */
+
+		// Actions (Mouse hover)
+
+		/*
+		 * driver.get("https://the-internet.herokuapp.com/hovers"); WebElement element =
+		 * driver.findElement(By.xpath("(//img[@alt='User Avatar'])[2]"));
+		 * 
+		 * Actions act = new Actions(driver); act.moveToElement(element).perform();
+		 * 
+		 * WebElement text = driver.findElement(By.xpath("//h5[text()='name: user1']"));
+		 * System.out.println(text.getText());
+		 */
+
+		// My Task
+
+		/*
+		 * driver.get("https://careers.hcltech.com/"); WebElement element =
+		 * driver.findElement(By.xpath("//a[@title='Country']")); Actions act = new
+		 * Actions(driver); act.moveToElement(element).perform();
+		 * 
+		 * WebElement element2 = driver.findElement(By.xpath("//a[text()='Americas']"));
+		 * act.moveToElement(element2).perform();
+		 * 
+		 * WebElement element3 = driver.findElement(By.xpath("//a[text()='Brazil']"));
+		 * System.out.println(element3 .getText()); element3.click();
+		 * //System.out.println(element2.getText());
+		 */
+		// login Popup Close
+		/*
+		 * driver.manage().window().maximize();
+		 * 
+		 * driver.get("https://www.flipkart.com/");
+		 * 
+		 * Thread.sleep(4000); // wait for popup
+		 * 
+		 * // Press ESC key to close popup Actions act = new Actions(driver);
+		 * act.sendKeys(Keys.ESCAPE).perform();
+		 */
+
+		// Double Click
+		Actions act = new Actions(driver);
+		/*
+		 * driver.get("https://testautomationpractice.blogspot.com/"); WebElement
+		 * element = driver.findElement(By.xpath("//button[text()='Copy Text']"));
+		 * 
+		 * act.doubleClick(element).perform();
+		 */
+
+		// Right Click
+
+		/*
+		 * driver.get("https://swisnl.github.io/jQuery-contextMenu/demo.html");
+		 * WebElement rightclick =
+		 * driver.findElement(By.xpath("//span[contains(@class,'context-menu-one ')]"));
+		 * act.contextClick(rightclick).perform();
+		 * 
+		 * WebElement element = driver.findElement(By.xpath("//span[text()='Edit']"));
+		 * element.click();
+		 * 
+		 * Alert alert = driver.switchTo().alert(); alert.accept();
+		 */
+
+		// Drag and Drop
+		/*
+		 * driver.get("https://testautomationpractice.blogspot.com/#"); WebElement
+		 * draggable = driver.findElement(By.id("draggable")); WebElement droppable =
+		 * driver.findElement(By.id("droppable"));
+		 * 
+		 * act.dragAndDrop(draggable, droppable).perform();
+		 */
+
+		// Drag and Drop (source,int XOffset,int Yoffset)
+		/*
+		 * driver.get("https://jqueryui.com/draggable/"); driver.switchTo().frame(0);
+		 * WebElement draggable = driver.findElement(By.id("draggable"));
+		 * act.dragAndDropBy(draggable, 150, 120).perform();
+		 */
+
+		// Click and Hold
+
+		/*
+		 * driver.manage().window().maximize();
+		 * 
+		 * driver.get("https://jqueryui.com/selectable/");
+		 * 
+		 * // 1️⃣ Switch to iframe driver.switchTo().frame(0);
+		 * 
+		 * // 2️⃣ Locate elements WebElement item1 =
+		 * driver.findElement(By.xpath("//li[text()='Item 1']")); WebElement item4 =
+		 * driver.findElement(By.xpath("//li[text()='Item 4']"));
+		 * 
+		 * // 4️⃣ Click and hold + drag
+		 * act.clickAndHold(item1).moveToElement(item4).release().perform();
+		 */
+		  //MyTask
+		  driver.get("https://demo.guru99.com/test/drag_drop.html");
+		  WebElement source = driver.findElement(By.xpath("//(//a[@class='button button-orange'])[5]"));
+		  WebElement target = driver.findElement(By.className("placeholder"));
+		  
+		  act.clickAndHold(source).moveToElement(target).perform();
+		  
+	}
+
+}

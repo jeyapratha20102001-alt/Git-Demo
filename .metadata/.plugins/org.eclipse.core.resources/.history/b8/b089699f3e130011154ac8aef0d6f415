@@ -1,0 +1,39 @@
+package framework;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseClass {
+
+	@Test()
+	public void login() {
+		driver.findElement(By.id("userName")).sendKeys("Test");
+		driver.findElement(By.id("password")).sendKeys("Test@12345", Keys.TAB);
+		driver.findElement(By.id("login")).click();
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+		WebElement until = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit")));
+		Assert.assertTrue(until.isDisplayed());
+
+	}
+
+	/*
+	 * @Test public void invalidLogin() {
+	 * driver.findElement(By.id("userName")).sendKeys("fdsgf");
+	 * driver.findElement(By.id("password")).sendKeys("345 ");
+	 * driver.findElement(By.id("login")).click();
+	 * Assert.assertEquals(driver.findElement(By.
+	 * id("//p[text()='Invalid username or password!']")).getText(),
+	 * "Invalid username or password!");
+	 * 
+	 * 
+	 * }
+	 */
+
+}
