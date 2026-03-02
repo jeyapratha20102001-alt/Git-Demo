@@ -277,7 +277,7 @@ public class Locators {
 		 */
 
 		// Double Click
-		Actions act = new Actions(driver);
+		//Actions act = new Actions(driver);
 		/*
 		 * driver.get("https://testautomationpractice.blogspot.com/"); WebElement
 		 * element = driver.findElement(By.xpath("//button[text()='Copy Text']"));

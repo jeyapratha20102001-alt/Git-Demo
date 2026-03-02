@@ -14,6 +14,7 @@ public class LoginTest extends BaseClass {
 		driver.findElement(By.id("userName")).sendKeys("Jey");
 		driver.findElement(By.id("password")).sendKeys("123");
 		driver.findElement(By.id("newUser")).click();
+		 System.out.println("Git  Testing");
 		
 		
 		
