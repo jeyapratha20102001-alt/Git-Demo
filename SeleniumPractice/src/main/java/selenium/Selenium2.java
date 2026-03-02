@@ -26,6 +26,7 @@ public class Selenium2 {
 			{
 				driver.switchTo().window(window);
 				System.out.println(driver.getTitle());
+				System.out.println("Git Demo Testing2");
 				
 			}
 			}
